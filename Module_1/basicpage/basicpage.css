@@ -1,0 +1,19 @@
+body {
+    background-color: beige;
+    font-family: Tahoma;
+    color: black;
+    width: 70%;
+    margin: 0px auto;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 20px;
+}
+.example {
+    text-align: right;
+    color: blue;
+    font-size: 1.2em;
+    font-style: oblique;
+}
+html {
+    background: gray;
+}
