@@ -1,0 +1,63 @@
+body {}
+
+p {
+    text-align: center;
+    font-size: 150%;
+}
+
+table p {
+    font-size: 100%;
+}
+
+table {
+    margin: 0px auto;
+    max-width: 60%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555555;
+}
+
+nav {
+    text-align: center;
+    margin: 20px;
+}
+
+.topBtn {
+    margin: 20px auto;
+    text-align: center;
+    background-color: #ccf;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1.2em;
+}
+
+footer {
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+}
