@@ -79,3 +79,28 @@ button {
 .demo {
     width: 20%;
 }
+
+.email-demo {
+    font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        margin: 0 auto;
+        border: 3px solid blue;
+        padding: 0 2em 1em;
+}
+
+.email-demo-heading {
+    color: blue;
+}
+
+.email-demo-label {
+    float: left;
+    text-align: right;
+}
+
+.email-demo-input {
+    margin-bottom:.5em;
+}
+
+.email-demo-span {
+    color: red;
+}

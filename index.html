@@ -584,6 +584,175 @@
         
         <hr>
 
+        <!-- Murach's JavaScript and jQuery -->
+        <h2 id="module4">Murach's JavaScript and jQuery</h2>
+        <table>
+            <thead>
+                <th>Link</th>
+                <th>Summary</th>
+                <th>Demonstration</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_1/email/index.html" target="_blank">
+                            Email Validation
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Using JavaScript to validate the email address is entered, re-entered, and name is entered.
+                    </td>
+                    <td class="demo email-demo">
+                        <script>
+                            var $ = function (id) {
+                                    return document.getElementById(id);
+                                };
+                                var joinList = function () {
+                                    var emailAddress1 = $('email_address1').value;
+                                    var emailAddress2 = $('email_address2').value;
+                                    var isValid = true;
+
+                                    if (emailAddress1 == "") {
+                                        $('email_address1_error').firstChild.nodeValue = "This field is required.";
+                                        isValid = false;
+                                    }
+                                    else {
+                                        $('email_address1_error').firstChild.nodeValue = "";
+                                    }
+
+                                    if (emailAddress1 != emailAddress2) {
+                                        $('email_address2_error').firstChild.nodeValue = "This entry must equal first entry";
+                                        isValid = false;
+                                    }
+                                    else {
+                                        $('email_address2_error').firstChild.nodeValue = "";
+                                    }
+
+                                    if ($('first_name').value == "") {
+                                        $('first_name_error').firstChild.nodeValue = "This field is required";
+                                        isValid = false;
+                                    }
+                                    else {
+                                        $('first_name_error').firstChild.nodeValue = "";
+                                    }
+
+                                    if (isValid) {
+                                        // submit the form if all entries are valid
+                                        $('email_form').onsubmit();
+                                    }
+                                };
+
+                                window.onload = function () {
+                                    $('join_list').onclick = joinList;
+                                }
+                        </script>
+                        <h4 class="email-demo-heading">Please join our email list</h4>
+                        <form id="email_form" name="email_form" action="join.html" method="get">
+                            <label class="email-demo-label" for="email_address1">Email Address:</label>
+                            <input class="email-demo-input" type="text" id="email_address1" name="email_address1">
+                            <span class="email-demo-span" id="email_address1_error">*</span><br>
+                        
+                            <label class="email-demo-label" for="email_address2">Re-enter Email Address:</label>
+                            <input class="email-demo-input" type="text" id="email_address2" name="email_address2">
+                            <span class="email-demo-span" id="email_address2_error">*</span><br>
+                        
+                            <label class="email-demo-label" for="first_name">First Name:</label>
+                            <input class="email-demo-input" type="text" id="first_name" name="first_name">
+                            <span class="email-demo-span" id="first_name_error">*</span><br>
+                        
+                            <label class="email-demo-label" >&nbsp;</label>
+                            <input class="email-demo-input" type="button" id="join_list" value="Join Our List">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_2/write.html" target="_blank">
+                            write() and writeln()
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Demonstrating the use of the write() and writeln() methods.
+                    </td>
+                    <td class="demo">
+                        <div id="dayWriteExample"></div>
+                        <script>dayWrite();
+                            document.getElementById('day-write').innerHTML = "Hello";
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_2/calculateMPG.html" target="_blank">
+                            Calculate MPG
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Calculating MPG, demonstrating using variables.
+                    </td>
+                    <td class="demo">
+                        <label>Miles</label><br>
+                        <input type="text" id="miles">
+                        <br>
+                        <label>Gallons</label>
+                        <br>
+                        <input type="text" id="gallons">
+                        <br>
+                        <button onclick="calculateMPG()">Calculate</button>
+                        <h5 id="mpg"></h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_2/averageTestScores.html" target="_blank">
+                            Average Test Scores
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Using a Prompt to get 3 different test scores then averaging them out. Finally displaying the results.
+                    </td>
+                    <td class="demo">
+                        <button onclick="averageTestScores()">Test Scores</button>
+                        <div id="average-test-scores"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_3/futureValue.html" target="_blank">
+                            Future Values Application
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Using default values with prompts and parsing the information to floats and integers.
+                    </td>
+                    <td class="demo">
+                        <button onclick="futureValues();">Future Value</button>
+                        <div id="futureValues"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_2/" target="_blank">
+                
+                        </a>
+                    </td class="summary">
+                    <td>
+                
+                    </td>
+                    <td class="demo">
+                
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Murach's JavaScript and jQuery -->
+
+        <div class="topBtn">
+            <a href="#top">Back to Top</a>
+        </div>
+
+        <hr>
+
         <!-- Main body end-->
         
         <!-- Footer Section -->
