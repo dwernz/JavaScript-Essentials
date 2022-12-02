@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1 id="top">KO Tech Academy's JavaScript Essentials</h1>
-        <p>This webpage shows all the lessons created during this course.</p>
+        <p>This webpage shows all the lessons created during this course. I included the work from Murach's JavaScript and jQuery book.</p>
         <hr />
         
         <!-- Navigation Section -->
@@ -16,7 +16,8 @@
             <a href="#module1">Module 1</a> |
             <a href="#module2">Module 2</a> |
             <a href="#module3">Module 3</a> |
-            <a href="#module4">Module 4</a>
+            <a href="#module4">Module 4</a> |
+            <a href="#murach">Murach</a>
         </nav>
         <!-- Navigation Section End-->
 
@@ -419,7 +420,7 @@
                             </li>
                         </ul>
                     </td>
-                    <td class="demo">
+                    <td class="demo text-center">
                         N/A
                     </td>
                 </tr>
@@ -497,21 +498,395 @@
                             <li>Uses the syntax (condition) ?True:False</li>
                         </ul>
                     </td>
-                    <td class="demo">
+                    <td class="demo text-center">
                         N/A
                     </td>
                 </tr>
                 <tr>
                     <td class="link">
-                        <a href="Module_2/" target="_blank">
-                
+                        <a href="Module_2/changeHTML_2.html" target="_blank">
+                            Working with Loops
+                        </a><br><br>
+                        <a href="Module_2/changeHTML_3.html" target="_blank">
+                            Working with Loops 2
+                        </a><br><br>
+                        <a href="Module_2/changeHTML_4.html" target="_blank">
+                            Working with For Loops
+                        </a><br><br>
+                        <a href="Module_2/changeHTML_5.html" target="_blank">
+                            Break Keyword
+                        </a><br><br>
+                        <a href="Module_2/changeHTML_6.html" target="_blank">
+                            Continue Keyword
                         </a>
                     </td class="summary">
                     <td>
-                
+                        <ul>Working with loops
+                            <li>Very quickly when working with programming you realize that there is code that you want to be repeated.</li>
+                            <li>Its more efficient to tell the browser to repeat something by typing it once then to have to retype countless times.</li>
+                            <li>
+                                Looping isn't the difficult part
+                                <ul>
+                                    <li>Fore every link in the page { // do this code }</li>
+                                    <li>For every field in a form on the page { // do this code }</li>
+                                    <li>200 times { // do this code }</li>
+                                </ul>
+                            </li>
+                            <li>Instead the difficulty is when to stop.</li>
+                            <li>
+                                The Do...While loop is a variant of the while loop with one major difference.
+                                <ul>
+                                    <li>It will always execute the code block at least once.</li>
+                                    <li>The first check to determine whether the condition is true or not comes after this initial execution.</li>
+                                </ul>
+                            </li>
+                            <li>The For loop is probably the most common type of loop to implement in large part because of the limited amount of code required for the loop.</li>
+                            <li>
+                                Regardless of the type of loop there are common parts
+                                <ul>
+                                    <li>Set up the index</li>
+                                    <li>Check the condition</li>
+                                    <li>Increment the condition</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Normally a loop will continue until the condition of the loop no longer evaluates to True but there are two exceptions using JavaScript keywords
+                                <ul>
+                                    <li>
+                                        Break
+                                        <ul>
+                                            <li>A special word that jumps us out of the loop for good.</li>
+                                            <li>Not used as often with For and While loops.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Continue
+                                        <ul>
+                                            <li>A special word that jumps back to the top of the loop.</li>
+                                            <li>So it stops that particular iteration but not the loop as a whole.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </td>
-                    <td class="demo">
-                
+                    <td class="demo text-center">
+                        <h4>Working with Loops</h4>
+                        <p id="counter-demo">This is text that will be replaced by the computation result.</p>
+                        <button type="button" onclick="counter1()">Counting</button><br>
+                        <button type="button" onclick="cars()">Cars</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <p>Just information</p>
+                    </td class="summary">
+                    <td>
+                        <ul>Creating Functions
+                            <li>
+                                There are times in JavaScript as in other programming languages that you would like to bundle a set of code so that it is reusable and functions
+                                provide this capability.
+                            </li>
+                            <li>
+                                Creating functions has many advantages
+                                <ul>
+                                    <li>Refer to reusable code using a user friendly name</li>
+                                    <li>Easily accept and process input parameters</li>
+                                    <li>Quickly add functionality to your website through the use of libraries.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                A function is simply a block of code designed to perform a particular task.
+                                <ul>
+                                    <li>A function is declared</li>
+                                    <li>Something ont he page "calls" the function</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Two basic types of functions exist
+                                <ul>
+                                    <li>Anonymous functions</li>
+                                    <li>Named functions</li>
+                                </ul>
+                            </li>
+                            <li>Both of these are created using the JavaScript keyword function</li>
+                            <li>
+                                Function syntax
+                                <ul>
+                                    <li>
+                                        Defined by the keyword <i>function</i> followed by a name and () or just ()
+                                        <ul>
+                                            <li>
+                                                Names can consist of
+                                                <ul>
+                                                    <li>Letters</li>
+                                                    <li>Numbers</li>
+                                                    <li>Underscores</li>
+                                                    <li>$ signs</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Parameters
+                                        <ul>
+                                            <li>Names listed in the function definition between the ()</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Arguments
+                                        <ul>
+                                            <li>Real values received by the function when it is invoked</li>
+                                            <li>Behave as local variables inside the function</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                The code inside a function will execute when something invokes (calls) the function
+                                <ul>
+                                    <li>An event occurs - a user clicks a button</li>
+                                    <li>It is invoked or called within JavaScript code</li>
+                                    <li>Automatically (self-invoked)</li>
+                                </ul>
+                            </li>
+                            <li>The return keyword defines the value that is "returned" back to the caller causing the function to stop</li>
+                            <li>
+                                Best practice is to define the function in the code before the function is called
+                                <ul>
+                                    <li>Functions should be defined early in the JavaScript file</li>
+                                    <li>Functions are then called later in the file</li>
+                                </ul>
+                            </li>
+                            <li>Functions can be defined globally or nested within other functions.</li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">
+                        N/A
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link text-center">
+                        <p>Just information</p>>
+                    </td class="summary">
+                    <td>
+                        <ul>Understanding Types and Objects
+                            <li>Most programming languages require you to declare variables using a particular type which tells the programming engine what data type to expect</li>
+                            <li>JavaScript is different in that it is a "loosely typed" language and doesn't care the type of object its dealing with in most cases</li>
+                            <li>The general types
+                                <ul>
+                                    <li>Numbers</li>
+                                    <li>Strings</li>
+                                    <li>Dates</li>
+                                    <li>Objects</li>
+                                </ul>
+                            </li>
+                            <li>Numbers in JavaScript o not have the intricacies that are present in other languages such as decimal, integer, large integer, floating point, etc.</li>
+                            <li>
+                                All numbers in JavaScript are assumed to be floating point integers which would cause a problem but since massive numeric calculations aren't 
+                                usually performed in client-side code its not an issue.
+                            </li>
+                            <li>If you surround numbers in quotes they will no longer be treated like a number but instead will be assumed to be a string</li>
+                            <li>
+                                This could possibly cause an error in your code and so you can declare a value to be a number using the syntax
+                                <br>var foo = "55";
+                                <br>var myNumber = number(foo);
+                            </li>
+                            <li>
+                                In addition to explicitly typing a variable you can use the built in JavaScript function NaN (Is Not a Number) in order to test the value of a 
+                                variable.
+                            </li>
+                            <li>You can write an else statement if you actually want to check and verify that something IS a number.</li>
+                            <li>The Math object in JavaScript can perform some very useful operations for developers using JavaScript</li>
+                            <li>Strings are used for storing and manipulating text and the text can be inside single quotes or double quotes but not both
+                                <ul>
+                                    <li>Can't start with single quotes and end with double quotes.</li>
+                                    <li>Can't use the same quotes more than once inside a string</li>
+                                    <li>Can use quotes inside a string as long as they are not the same as the outside quotes.</li>
+                                </ul>
+                            </li>
+                            <li>When you have a situation where you need to include special characters (like quotes) inside of a string value you have two options
+                                <ul>
+                                    <li>Change the quotes i.e. single quotes inside of double quotes.</li>
+                                    <li>Escape the special characters using the \ character.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                String properties
+                                <ul>
+                                    <li>Length - the primary property that you will use which simply returns the length of the string.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                The Date object allows you to work with Dates
+                                <ul>
+                                    <li>Years</li>
+                                    <li>Months</li>
+                                    <li>Days</li>
+                                    <li>Hours</li>
+                                    <li>Minutes</li>
+                                    <li>Seconds</li>
+                                    <li>Milliseconds</li>
+                                </ul>
+                            </li>
+                            <li>Can be written as a string "Tue Dec 15 15:32:52 GMT-0500 (EST)</li>
+                            <li>Can be written as a number 1450211572636</li>
+                            <li>
+                                String Methods
+                                <ul>
+                                    <li>charAt()</li>
+                                    <li>Match()</li>
+                                    <li>Replace()</li>
+                                    <li>Search()</li>
+                                    <li>Slice()</li>
+                                    <li>toLowerCase()</li>
+                                    <li>Trim()</li>
+                                    <li>toUpperCase()</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Initiating a date can happen in different ways
+                                <ul>
+                                    <li>new Date()</li>
+                                    <li>new Date(milliseconds)</li>
+                                    <li>new Date(dateString)</li>
+                                    <li>new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+                                </ul>
+                            </li>
+                            <li>By default creates a new date object with the current date and time but using other mechanisms you can choose a specified date and time</li>
+                            <li>Once the date object is created there are various methods that allow you to operate on it.
+                                <ul>
+                                    <li>Get and set the year, month, dat, hour, etc.</li>
+                                    <li>Display the date in different formats</li>
+                                </ul>
+                            </li>
+                            <li>Methods include
+                                <ul>
+                                    <li>getDate() - get the day as a number</li>
+                                    <li>getDay() - get the weekday as a number</li>
+                                    <li>getFullYear() - get the four digit year</li>
+                                    <li>getHours() - get the hour</li>
+                                    <li>getMinutes() = get the minutes</li>
+                                </ul>
+                            </li>
+                            <li>Objects in JavaScript are everywhere, if you understand objects then you understand JavaScript.</li>
+                            <li>Objects have properties (attributes) and methods (actions).</li>
+                            <li>
+                                Consider a real life object like a pizza
+                                <ul>
+                                    <li>All pizza objects have properties.
+                                        <ul>
+                                            <li>Toppings</li>
+                                            <li>Crust</li>
+                                            <li>Size</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        They have methods associated with them as well
+                                        <ul>
+                                            <li>Freeze</li>
+                                            <li>Cook</li>
+                                            <li>Prepare</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Objects in JavaScript are the same in that they will all contain the same properties and methods but with differing values.</li>
+                            <li>
+                                Consider an object called Person
+                                <ul>
+                                    <li>Properties
+                                        <ul>
+                                            <li>firstName</li>
+                                            <li>lastName</li>
+                                            <li>fullName</li>
+                                            <li>DOB</li>
+                                        </ul>
+                                    </li>
+                                    <li>Methods
+                                        <ul>
+                                            <li>Function definitions</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Nearly everything in JavaScript can be an object:<br>Booleans, Numbers, Strings, Dates, Maths, Regular expressions, Arrays, Functions, Objects</li>
+                            <li>Basically everything except for primitive values are objects but even those can be created as objects.</li>
+                            <li>Objects are simply variables containing variables
+                                <ul>
+                                    <li>Variables can only contain a single value</li>
+                                    <li>Objects can contain multiple values in name:value pairs</li>
+                                    <li>The name:value pairs are referred to as properties</li>
+                                    <li>Methods are actions that can be performed on objects
+                                        <ul>
+                                            <li>An object property that contains a function definition</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>You can create JavaScript objects in various ways
+                                <ul>
+                                    <li>Define and create a single object using an object literal</li>
+                                    <li>Define and create a single object using the keyword new</li>
+                                    <li>Define an object constructor and then create objects of the constructed type</li>
+                                </ul>
+                            </li>
+                            <li>Creating a single object using an object literal is the easiest way to create a JavaScript object.
+                                <ul>
+                                    <li>You both define and create the object in a single statement</li>
+                                    <li>Uses a list of name:value pairs inside {}</li>
+                                </ul>
+                            </li>
+                            <li>The 2nd option is to use the NEW keyword to create an object though this is deemed unnecessary</li>
+                            <li>The previous methods for creating objects are limited to creating a single object</li>
+                            <li>There are times when you would like to create an object "type" that can then be reused to create multiple objects of a single type</li>
+                            <li>The way to achieve this is to use the 3rd option of creating objects by using an object constructor function</li>
+                            <li>The properties are the most important parts of an object
+                                <ul>
+                                    <li>They are the values associated with an object</li>
+                                    <li>A collection of unordered properties</li>
+                                    <li>Can usually be added, changed, and deleted though some are read-only</li>
+                                </ul>
+                            </li>
+                            <li>Syntax
+                                <ul>
+                                    <li>objectName.property - person.firstName</li>
+                                    <li>objectName["property"] - person["firstName"]</li>
+                                </ul>
+                            </li>
+                            <li>Object methods are actions that can be performed on objects</li>
+                            <li>Essentially methods are properties that contain a function definition</li>
+                            <li>
+                                You create object methods using this syntax
+                                <ul>
+                                    <li>MethodName:function() {executable code}</li>
+                                </ul>
+                            </li>
+                            <li>You then access the method using this syntax
+                                <ul>
+                                    <li>objectName.methodName()</li>
+                                </ul>
+                            </li>
+                            <li>Every JavaScript object has a prototype and the prototype is also an object
+                                <ul>
+                                    <li>New objects inherit their properties and methods from their prototype</li>
+                                    <li>Objects created using an object literal or with new Object() inherit from the Object.prototype</li>
+                                    <li>Objects created from a particular object like new Date() would inherit from the Date prototype</li>
+                                </ul>
+                            </li>
+                            <li>You can create object prototypes to then use in creating additional objects and you do so using an object constructor function</li>
+                            <li>You can add properties or methods
+                                <ul>
+                                    <li>To existing objects</li>
+                                    <li>To all existing objects of a specific type</li>
+                                    <li>To an object prototype</li>
+                                </ul>
+                            </li>
+                            <li>Adding to objects only changes the object in question but adding to the prototype will modify new objects created using that prototype</li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">
+                        N/A
                     </td>
                 </tr>
             </tbody>
@@ -540,7 +915,7 @@
                         </a>
                     </td class="summary">
                     <td>
-                
+                        <li></li>
                     </td>
                     <td class="demo"></td>
                 </tr>
@@ -585,7 +960,7 @@
         <hr>
 
         <!-- Murach's JavaScript and jQuery -->
-        <h2 id="module4">Murach's JavaScript and jQuery</h2>
+        <h2 id="murach">Murach's JavaScript and jQuery</h2>
         <table>
             <thead>
                 <th>Link</th>
@@ -677,7 +1052,6 @@
                     <td class="demo">
                         <div id="dayWriteExample"></div>
                         <script>dayWrite();
-                            document.getElementById('day-write').innerHTML = "Hello";
                         </script>
                     </td>
                 </tr>
@@ -761,7 +1135,8 @@
                 <a href="#module1">Module 1</a> |
                 <a href="#module2">Module 2</a> |
                 <a href="#module3">Module 3</a> |
-                <a href="#module4">Module 4</a>
+                <a href="#module4">Module 4</a> |
+                <a href="#murach">Murach</a>
             </nav>
             Copyright &copy; 2022 - Daniel Wernz - KO Tech Academy - JavaScript Essentials
         </footer>
