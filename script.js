@@ -175,3 +175,54 @@ function cars() {
 
     document.getElementById('counter-demo').innerHTML = text;
 }
+
+function calcTestScores() {   
+    var text = "";
+    var total = 0;
+    var entryCount = 0;
+    var entry;
+    do {
+        entry = prompt("Enter test score\n" + "Or enter 999 to end entries", 999);
+        entry = parseInt(entry);
+        if (entry >= 0 && entry <= 100) {
+            total = total + entry;
+            entryCount++;
+            text = text + entryCount + ": " + entry + "\n";
+        }
+        else if (entry != 999) {
+            alert("Entry must be a valid number from 0 through 100\n" + "Or enter 999 to end entries");
+        }
+    } while (entry != 999);
+    var average = total /entryCount;
+    average = parseInt(average);
+    alert(text + "\nAverage score is " + average);
+
+}
+
+function mOver(obj) {
+                obj.innerHTML = "Thank you";
+                obj.style.backgroundColor = "red";
+            }
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me";
+    obj.style.backgroundColor = "blue";
+}
+
+function changeColor() {
+    if (document.getElementById('changeColor').style.backgroundColor == "blue") {
+        document.getElementById('changeColor').style.backgroundColor = "red";
+        document.getElementById('changeColor').style.color = "white";
+    }
+    else if (document.getElementById('changeColor').style.backgroundColor == "red") {
+         document.getElementById('changeColor').style.backgroundColor = "yellow";
+         document.getElementById('changeColor').style.color = "black"
+    }
+    else {
+        document.getElementById('changeColor').style.backgroundColor = "blue";
+        document.getElementById('changeColor').style.color = "white";
+    }
+    
+}
+
+setInterval(changeColor, 2000);

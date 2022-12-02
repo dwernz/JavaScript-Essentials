@@ -909,15 +909,231 @@
             </thead>
             <tbody>
                 <tr>
+                    <td class="link text-center">
+                        <p>Just information</p>>
+                    </td class="summary">
+                    <td>
+                        <ul>Introduction to the HTML Document Object Model (DOM)
+                            <li>The JavaScript code that we write does not operate in a vacuum but instead it is attached to HTML web pages.</li>
+                            <li>
+                                The web page is the script upon which we are working so we must be able to reach into the page to get information and have the page respond back to 
+                                our code.
+                            </li>
+                            <li>Understanding the DOM is the way to do that, it is an incredibly important part of understanding the functionality of JavaScript.</li>
+                            <li>What exactly is the DOM?
+                                <ul>
+                                    <li>Its not a language</li>
+                                    <li>Its not a part of JavaScript</li>
+                                    <li>It's a fairly vague term</li>
+                                </ul>
+                            </li>
+                            <li>
+                                The web definition is "The Document Object Model is an application programming interface that defines logical structure of well-formed an XML and 
+                                HTML documents"
+                            </li>
+                            <li>Taking apart the statement DOM will help to understand
+                                <ul>
+                                    <li>Document - is the web page itself</li>
+                                    <li>Object - refers to the objects that are created based on the HTML structure</li>
+                                    <li>Model - a consistent way to approach the various objects</li>
+                                </ul>
+                            </li>
+                            <li>So the HTML DOM is a standard object model and programming interface for HTML which defines
+                                <ul>
+                                    <li>HTML elements as objects</li>
+                                    <li>The properties of all HTML elements</li>
+                                    <li>The methods to access all HTML elements</li>
+                                    <li>The events for all HTML elements</li>
+                                </ul>
+                            </li>
+                            <li>The HTML DOM is a standard for how to get, change, add, or delete HTML elements</li>
+                            <li>DOM methods are actions that you can perform on HTML elements</li>
+                            <li>DOM properties are values that you can set or change
+                                <ul>
+                                    <li>All HTML elements are defined as objects and accessible through JavaScript</li>
+                                    <li>A property is a value that you can retrieve or modify
+                                        <ul>
+                                            <li>Changing the content of an HTML element</li>
+                                        </ul>
+                                    </li>
+                                    <li>A method is an action that you do
+                                        <ul>
+                                            <li>Adding an HTML element</li>
+                                            <li>Deleting an HTML element</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">N/A</td>
+                </tr>
+                <tr>
                     <td class="link">
-                        <a href="Module_3/" target="_blank">
-                
+                        <p>Just information</p>
+                    </td class="summary">
+                    <td>
+                        <ul>Accessing DOM Elements
+                            <li>There are multiple ways of finding and accessing DOM elements which is the first step to dealing with the HTML DOM</li>
+                            <li>If you want to manipulate the HTML elements you must first locate them</li>
+                            <li>The key is understanding "where" in the DOM is the item that you wish to grab hold of as well as the critical question "Is it unique?"</li>
+                            <li>
+                                Options
+                                <ul>
+                                    <li>Find HTML elements by ID = document.getElementById</li>
+                                    <li>Find HTML elements by tag name - document.getElementByTagName</li>
+                                    <li>Find HTML elements by class - document.getElementByClassName</li>
+                                    <li>Find HTML elements by CSS selectors - document.querySelectorAll</li>
+                                </ul>
+                            </li>
+                            <li>Once you have the element you can access individual attributes using the getAttribute() method</li>
+                            <li>This method will allow you to access the attributes for anu element on the page</li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">N/A</td>
+                </tr>
+                <tr>
+                    <td class="link text-center">
+                        <p>Just information</p>>
+                    </td class="summary">
+                    <td>
+                        <ul>Changing DOM Elements
+                            <li>Accessing DOM elements is the first step but often we would like to modify those elements either entirely or in part, such as attributes</li>
+                            <li>One such way of changing elements is to modify the content which is performed using the innerHTML property</li>
+                            <li>Another option is to modify attributes</li>
+                            <li>Another way in which the HTML can be changed is to actually modify the style that is used using CSS properties</li>
+                            <li>Any CSS styles can be modified on page load or based on events on the page
+                                <ul>
+                                    <li>The key is to use the CSS property names without the (-) character
+                                        <ul>
+                                            <li>Font-family becomes fontFamily</li>
+                                            <li>Border-style becomes borderStyle</li>
+                                            <li>Background-color becomes backgroundColor</li>
+                                        </ul>
+                                    </li>
+                                    <li>Using setAttribute("style", "color:blue"); would also be supported and can use the (-)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">N/A</td>
+                </tr>
+                <tr>
+                    <td class="link text-center">
+                        <p>Just information</p>>
+                    </td class="summary">
+                    <td>
+                        <ul>Creating DOM Elements
+                            <li>Although the innerHTML property can be used to add content to a page its not the cleanest method available with plenty of chance for error</li>
+                            <li>Instead you can create elements within the DOM and once created add a text node to those elements</li>
+                            <li>This results in a more precise and better way of modifying page content which always involves two steps
+                                <ul>
+                                    <li>Create the element</li>
+                                    <li>Add the element to the right place in the document</li>
+                                </ul>
+                            </li>
+                            <li>The next step is either
+                                <ul>
+                                    <li>Access the innerHTML property pf the element we just created to add content</li>
+                                    <li>Create a new text node and attach to the element (more precise)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="demo text-center">N/A</td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Module_3/event.html" target="_blank">
+                            Responding to Events
                         </a>
                     </td class="summary">
                     <td>
-                        <li></li>
+                        <ul>Responding to Events
+                            <li>Thus far our code has been loaded along with the web page which is really not very useful</li>
+                            <li>JavaScript is supposed to control the behavior of the page and its interactivity with the user which means that our code should be able to respond to actions that are taken on the page</li>
+                            <li>This is where events and event listeners come into play
+                                <ul>
+                                    <li>You don't cause the events they are occurring all the time.</li>
+                                    <li>You choose which of these events that you want to respond to</li>
+                                    <li>You write an event listener in order to handle those particular events and respond the way that you would like</li>
+                                </ul>
+                            </li>
+                            <li>Three ways to react to events
+                                <ul>
+                                    <li>Write the JavaScript code directly into the HTML</li>
+                                    <li>Specify the element and event you want to handle and write a function</li>
+                                    <li>Use the addEventListener() function</li>
+                                </ul>
+                            </li>
+                            <li>The first option is a simple option and is often done but really not recommended
+                                <ul>
+                                    <li>It mixes the HTML code and the JavaScript</li>
+                                    <li>Its not very portable</li>
+                                    <li>Generally not a good idea</li>
+                                </ul>
+                            </li>
+                            <li>The 2nd option is often the best and involves identifying the element that you want to act upon and the event that
+                                you would like to respond to
+                                <ul>
+                                    <li>The element is referenced by using a variable</li>
+                                    <li>The event is chose from the list of possible events</li>
+                                    <li>An anonymous function is created that contains the code that you want to run</li>
+                                </ul>
+                            </li>
+                            <li>The 3rd option used the addEventListener() method</li>
+                            <li>Parameters
+                                <ul>
+                                    <li>The event you want to respond to minus the word on</li>
+                                    <li>The function that you want to call</li>
+                                    <li>True or False</li>
+                                </ul>
+                            </li>
+                            <li>There are many events that you can respond to
+                                <ul>
+                                    <li>Onclick</li>
+                                    <li>Onload</li>
+                                    <li>Onunload</li>
+                                    <li>Onchange</li>
+                                    <li>Onmouseover</li>
+                                    <li>Onmouseout</li>
+                                    <li>Onmouseup</li>
+                                    <li>Onmousedown</li>
+                                    <li>Onfocus</li>
+                                    <li>Onblur</li>
+                                </ul>
+                            </li>
+                            <li>There are times when we would like behavior on a page automatically controlled based on time lapse</li>
+                            <li>Though not technically events they are very similar in their function</li>
+                            <li>Two built in functions will provide this capability quite easily in JavaScript
+                                <ul>
+                                    <li>setTimeout()</li>
+                                    <li>setInterval()</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </td>
-                    <td class="demo"></td>
+                    <td class="demo">
+                        <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:blue; 
+                                    width:120px; 
+                                    height: 20px; 
+                                    padding: 40px;
+                                    color: white;
+                                    text-align: center;"
+                                    >
+                            Mouse Over Me
+                        </div>
+                        <div id="changeColor"
+                        style="background-color:blue; 
+                                    width:120px; 
+                                    height: 20px; 
+                                    padding: 40px;
+                                    color: white;
+                                    text-align: center;
+                                    margin-top: 20px;">
+                            I change colors every 2 seconds
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -1106,7 +1322,34 @@
                 </tr>
                 <tr>
                     <td class="link">
-                        <a href="Murach/Chapter_2/" target="_blank">
+                        <a href="Murach/Chapter_3/testScores2.html" target="_blank">
+                            Test Scores 2
+                        </a>
+                    </td class="summary">
+                    <td>
+                        Using a do...while loop to continue to get test scores until a user enters a sentinel value, then calculates the average score<br>
+                        Changed the original code to display all the numbers entered for review.
+                    </td>
+                    <td class="demo">
+                        <button type="submit" onclick="calcTestScores()">Test Scores Calculator</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_3/" target="_blank">
+                
+                        </a>
+                    </td class="summary">
+                    <td>
+                
+                    </td>
+                    <td class="demo">
+                
+                    </td>
+                </tr>
+                <tr>
+                    <td class="link">
+                        <a href="Murach/Chapter_3/" target="_blank">
                 
                         </a>
                     </td class="summary">
