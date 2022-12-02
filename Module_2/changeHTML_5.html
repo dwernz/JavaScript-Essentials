@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Working with Loops</h1>
+        <p id="demo">This is text that will be replaced by the computation result.</p>
+
+        <script>
+            var text = "";
+
+            for (i = 0; i < 10; i++) {
+                if (i === 3) { break; }
+                text += "<br>The number is " + i
+            }
+            
+        </script>
+
+        <button type="button" onclick="document.getElementById('demo').innerHTML = text;">Click Me!</button>
+    </body>
+</html>

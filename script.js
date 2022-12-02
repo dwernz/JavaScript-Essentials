@@ -148,3 +148,30 @@ function dayWrite() {
     "<pre>Welcome to our site! " +
     "Today is " + dayOfWeek + ".</pre>";                        
 }
+
+function counter1() {
+    var i = 1;
+    var text = "";
+
+    while (i < 10) {
+        text += ".<br>The number is " + i;
+        i++;
+
+    }
+
+    document.getElementById('counter-demo').innerHTML = text;
+}
+
+function cars() {
+    var cars = ["BMW", "Volvo", "Saab", "Porsche"];
+    var i = 0;
+    var text = "";
+
+    while (cars[i]) {
+        text += cars[i] + "<br>";
+        i++;
+
+    }
+
+    document.getElementById('counter-demo').innerHTML = text;
+}

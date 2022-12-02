@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Working with Loops</h1>
+        <p id="demo">This is text that will be replaced by the computation result.</p>
+
+        <script>
+            var cars = ["BMW", "Volvo", "Saab", "Porsche", "Ferrari", "Yugo"];
+            var text = "";
+
+            for (i = 0; i < cars.length; i++) {
+                text += cars[i] + "<br>";
+            }
+            
+        </script>
+
+        <button type="button" onclick="document.getElementById('demo').innerHTML = text;">Click Me!</button>
+    </body>
+</html>
