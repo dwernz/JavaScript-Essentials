@@ -4,6 +4,7 @@
         <title>JavaScript Essentials</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="script.js"></script>
     </head>
     <body>
@@ -1156,7 +1157,7 @@
             <tbody>
                 <tr>
                     <td class="link text-center">
-                        <p>Just information</p>>
+                        <p>Just information</p>
                     </td class="summary">
                     <td>
                         <ul>Introduction to Libraries
@@ -1212,37 +1213,90 @@
                     <td class="demo text-center">N/A</td>
                 </tr>
                 <tr>
-                    <td class="link">
-                        <a href="Module_4/" target="_blank">
-                
-                        </a>
+                    <td class="link text-center">
+                        <p>Just information</p>
                     </td class="summary">
                     <td>
-                
+                        <ul>Installing and Using jQuery
+                            <li>jQuery is just one of many libraries in use but it is the most popular library which helps assist developers
+                                <ul>
+                                    <li>A lightweight "write less do more" library designed to make it much easier to include JavaScript on your website</li>
+                                    <li>Takes many common tasks which require lines and lines of code and wraps them in methods you can call with a single line of code</li>
+                                    <li>Simplified many complicated tasks in JavaScript
+                                        <ul>
+                                            <li>HTML/DOM manipulation</li>
+                                            <li>CSS manipulation</li>
+                                            <li>HTML event methods</li>
+                                            <li>Effects and animations</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>To begin using jQuery you either download it locally or use a CDN
+                                <ul>
+                                    <li>Local jQuery files are preferred on production websites for speed and reliability</li>
+                                    <li>CDN is perfect for development, testing, and learning</li>
+                                </ul>
+                            </li>
+                            <li>jQuery Syntax
+                                <ul>
+                                    <li>The syntax is tailored for selecting HTML elements and then performing actions on those elements<br>$(selector).action()</li>
+                                </ul>
+                            </li>
+                            <li>
+                                A common problem when programming JavaScript has to do with scripts running before the page is loaded which sometimes prevents the scripts from 
+                                gaining access to HTML elements on the page
+                            </li>
+                            <li>jQuery has a function called ready() that is designed to take care of that in that it waits for the page to be ready (all HTML elements loaded)</li>
+                            <li>Essentially you would just place the code inside the ready function</li>
+                        </ul>
                     </td>
-                    <td class="demo"></td>
+                    <td class="demo text-center">N/A</td>
                 </tr>
                 <tr>
                     <td class="link">
-                        <a href="Module_4/" target="_blank">
-                
+                        <a href="Module_4/getText.html" target="_blank">
+                            Get Text/HTML
+                        </a><br><br>
+                        <a href="Module_4/getAttributes.html" target="_blank">
+                            Get Attributes
+                        </a><br><br>
+                        <a href="Module_4/setContent.html" target="_blank">
+                            Set Content
+                        </a><br><br>
+                        <a href="Module_4/add.html" target="_blank">
+                            Appending Text
+                        </a><br><br>
+                        <a href="Module_4/remove.html" target="_blank">
+                            Removing Content
+                        </a><br><br>
+                        <a href="Module_4/animate.html" target="_blank">
+                            Animate
                         </a>
                     </td class="summary">
                     <td>
-                
+                        <ul>Modifying Web Pages Using jQuery
+                            <li>jQuery contains powerful methods for changing and manipulating HTML content both in content and style</li>
+                            <li>Various DOM related methods exist within jQuery making it easy to manipulate elements and attributes</li>
+                            <li>Primary methods
+                                <ul>
+                                    <li>Text() - sets or returns the text content of the selected element</li>
+                                    <li>Html() - sets or returns the content of the selected element (including HTML markup)</li>
+                                    <li>Val() - sets or returns the values in form fields</li>
+                                </ul>
+                            </li>
+                            <li>Additional methods are available to add and remove content from the web Page using jQuery
+                                <ul>
+                                    <li>Append()</li>
+                                    <li>Prepend()</li>
+                                    <li>After()</li>
+                                    <li>Before()</li>
+                                </ul>
+                            </li>
+                        </ul>
                     </td>
-                    <td class="demo"></td>
-                </tr>
-                <tr>
-                    <td class="link">
-                        <a href="Module_4/" target="_blank">
-                
-                        </a>
-                    </td class="summary">
-                    <td>
-                
+                    <td class="demo">N/A
                     </td>
-                    <td class="demo"></td>
                 </tr>
             </tbody>
         </table>

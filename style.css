@@ -33,8 +33,13 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: #2b7ebF;
+}
+
 a:hover {
-    color: #555555;
+    color: #060029;
+    font-size: 1.2em;
 }
 
 nav {
